@@ -22,22 +22,12 @@ To perform a live network capture using Wireshark and identify different types o
 
 ##  Protocols Identified
 
-### 1. **DNS (Domain Name System)**
-- Translates domain names (like `google.com`) into IP addresses.
-- Seen during website browsing.
-- Protocol: UDP port 53
+### 1. DNS (Domain Name System)
 
-### 2. **ICMP (Internet Control Message Protocol)**
-- Used in ping operations to test connectivity.
-- Echo requests and echo replies were captured.
-- Protocol: ICMP type 8 (request), type 0 (reply)
+### 2. **ICMPv6 (Internet Control Message Protocol)**
+- 
 
-### 3. **HTTP (HyperText Transfer Protocol)**
-- Used to access websites.
-- HTTP GET and response packets captured.
-- Protocol: TCP port 80
-
-### 4. **TCP (Transmission Control Protocol)**
+### 3. **TCP (Transmission Control Protocol)**
 - Underlying transport for HTTP and other protocols.
 - Three-way handshake observed: SYN → SYN-ACK → ACK
 - Seen in reliable data transfers.
@@ -48,7 +38,6 @@ To perform a live network capture using Wireshark and identify different types o
 
 - DNS requests showed hostname resolutions.
 - ICMP packets proved connectivity with external servers.
-- HTTP packets revealed unencrypted web requests and headers.
 - TCP sessions followed expected SYN/ACK/FIN sequences.
 - Some `Info` packets showed retransmissions, likely due to small packet loss.
 
